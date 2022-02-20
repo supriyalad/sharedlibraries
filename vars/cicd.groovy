@@ -14,3 +14,7 @@ def test(path)
 {
   sh "java -jar $path/testing.jar"
 }
+def approval(name)
+{
+  input message: 'Need approval before deploying on PROD', submitter: "$name" 
+}
